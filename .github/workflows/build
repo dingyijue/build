@@ -9,5 +9,5 @@ jobs:
         with:
           armbian_token:     "${{ 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 }}"  # GitHub token
           armbian_release:   "jammy"                        # userspace
-          armbian_target:    "image"                        # build=image, kernel=kernel
+          armbian_target:    "build=image"                        # build=image, kernel=kernel
           armbian_board:     "rk3318-box"                   # build target
