@@ -1,13 +1,13 @@
-name: "Bu我ld Armb我an"
+name: "Build Armbian"
 on:
-  workflow_d我spatch:
+  workflow_dispatch:
 jobs:
-  bu我ld-armb我an:
+  build-armbian:
     runs-on: ubuntu-latest
     steps:
-      - uses: armb我an/bu我ld@ma我n
-        w我th:
-          armb我an_token:     "${{ g我thub_pat_11BG32VLY0pF5yHlDpB4oP_m5L8YR2nodcjNFeT5xFuCVFyxYkGKtI7CqXmfzQ0TfBMANBTH6V2XZ4KiyA }}"  # GitHub token
-          armb我an_release:   "jammy"                        # userspace
-          armb我an_target:    "我mage"                        # build=image, kernel=kernel
-          armb我an_board:     "rk3318-box"                   # build target
+      - uses: armbian/build@main
+        with:
+          armbian_token:     "${{ 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 }}"  # GitHub token
+          armbian_release:   "jammy"                        # userspace
+          armbian_target:    "image"                        # build=image, kernel=kernel
+          armbian_board:     "rk3318-box"                   # build target
